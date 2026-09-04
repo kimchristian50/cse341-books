@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb';
-import dns from 'dns';
+// import dns from 'dns';
 
 // Force Node.js to use Google's public DNS servers locally
 // dns.setServers(['8.8.8.8', '8.8.4.4']);
@@ -14,7 +14,8 @@ const connectToDb = async () => {
 
     const client = new MongoClient(connectionString);
     await client.connect();
-    database = client.db(process.env.MONGODB_DB_NAME || 'practice');
+    // database = client.db(process.env.MONGODB_DB_NAME || 'practice');
+    database = client.db(process.env.MONGODB_DB_NAME);
     return database;
 };
 
