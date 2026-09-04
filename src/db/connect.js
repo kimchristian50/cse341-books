@@ -1,4 +1,8 @@
 import { MongoClient } from 'mongodb';
+import dns from 'dns';
+
+// Force Node.js to use Google's public DNS servers locally
+// dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 let database;
 
