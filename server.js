@@ -11,6 +11,9 @@ const startServer = async () => {
     try {
         await connectToDb();
 
+        // const books = await getDb().collection('books').find({}).toArray();
+        // console.log('Book documents:', books);
+
         app.listen(PORT, () => {
             console.log(`Server listening on port ${PORT}`);
         });
