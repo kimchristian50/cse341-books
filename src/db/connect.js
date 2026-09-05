@@ -14,8 +14,7 @@ const connectToDb = async () => {
 
     const client = new MongoClient(connectionString);
     await client.connect();
-    // database = client.db(process.env.MONGODB_DB_NAME || 'practice');
-    database = client.db(process.env.MONGODB_DB_NAME);
+    database = client.db(process.env.MONGODB_DB_NAME || 'practice');
     return database;
 };
 
